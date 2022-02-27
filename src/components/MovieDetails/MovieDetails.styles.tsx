@@ -22,13 +22,13 @@ export const MovieDetailsCard = styled.div`
 export const CardImgBlur = styled.img`
   filter: blur(10px);
   position: absolute;
-  left: 14rem;
+  left: 8rem;
   top: 10rem;
 `
 
 export const TitleShadow = styled.span`
   position: absolute;
-  top: 11rem;
+  top: 8rem;
   z-index: 0;
   font-family: Poppins;
   font-style: normal;
