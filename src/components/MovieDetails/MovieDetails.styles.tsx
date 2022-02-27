@@ -1,7 +1,7 @@
 import styled, {css} from 'styled-components'
 import {ReactComponent as favourites} from "../../assets/favourites.svg";
 import {FavouriteButtonType} from "../../types/types";
-import {ReactComponent as Back} from "../../assets/backArrow.svg";
+import {ReactComponent as home} from "../../assets/home.svg";
 
 
 export const MovieDetailsScreen = styled.div`
@@ -83,18 +83,13 @@ export const FavouritesButton = styled(favourites)<FavouriteButtonType>`
 export const HomeButton = styled.div`
   margin-left: 2rem;
   margin-top: 2rem;
-  width: 7.5rem;
-  font-family: Montserrat;
-  color: #E5E5E5;
-  font-weight: 600;
-  font-size: 24px;
-  text-transform: uppercase;
+  width: 4rem;
   cursor: pointer;
   box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25), inset -2px -2px 4px rgba(229, 229, 229, 0.5);
-  border-radius: 100px;
+  border-radius: 20px;
   opacity: 50%;
 `
 
-export const BackArrow = styled(Back)`
+export const Home = styled(home)`
   cursor: pointer;
 `

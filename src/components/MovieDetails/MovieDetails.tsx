@@ -11,10 +11,10 @@ import {useAppDispatch, useAppSelector} from "../../hooks/redux";
 import {addToFavourites, removeFromFavourites} from "../../store/modules/Favourites/slice";
 import {MovieDetailsType} from "../../types/types";
 import {
-  BackArrow,
   CardImgBlur,
   FavouritesButton,
   Gross,
+  Home,
   HomeButton,
   ImgRatingBlock,
   MovieDetailsCard,
@@ -59,7 +59,7 @@ export const MovieDetails = ({}) => {
     <MovieDetailsScreen>
       <StyledLink to={"/moviesearcher"}>
         <HomeButton>
-         <BackArrow />
+         <Home />
         </HomeButton>
       </StyledLink>
       <MovieDetailsCard >
