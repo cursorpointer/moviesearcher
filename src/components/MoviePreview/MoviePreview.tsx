@@ -32,7 +32,7 @@ export const MoviePreview: FC<MovieType> = ({
             <Question/>
           }
           <CardOverview>
-            <StyledLink to={`/details/${id}`}> <Title>{title}</Title> </StyledLink>
+            <StyledLink to={`/moviesearcher/details/${id}`}> <Title>{title}</Title> </StyledLink>
             <Date>{release_date} г.</Date>
             <Genres>{genres && genres[0].name}</Genres>
             <Description overview={overview}>{!overview && "Описание отсутствует"} {overview}</Description>

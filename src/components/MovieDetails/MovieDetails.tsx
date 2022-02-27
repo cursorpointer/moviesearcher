@@ -57,7 +57,7 @@ export const MovieDetails = ({}) => {
 
   return (
     <MovieDetailsScreen>
-      <StyledLink to={"/"}>
+      <StyledLink to={"/moviesearcher"}>
         <HomeButton>
          <BackArrow />
         </HomeButton>

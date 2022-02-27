@@ -1,14 +1,16 @@
 import React from 'react';
-import {BrowserRouter} from "react-router-dom";
-import {Routers} from "./services/Routers";
+import {Route, Routes} from "react-router-dom";
+import {Main} from "./components/Main/Main";
+import {MovieDetails} from "./components/MovieDetails/MovieDetails";
 
 function App() {
 
   return (
     <div>
-      <BrowserRouter>
-        <Routers />
-      </BrowserRouter>
+      <Routes>
+        <Route path={"/moviesearcher"} element={<Main/>}/>
+        <Route path={"/moviesearcher/details/:id"} element={<MovieDetails/>}/>
+      </Routes>
     </div>
   );
 }
