@@ -12,9 +12,7 @@ import {Question} from "./components/Main/Main.styles";
 ReactDOM.render(
   <Provider store={store}>
     <PersistGate loading={<Question />} persistor={persistor}>
-    <BrowserRouter>
       <App/>
-    </BrowserRouter>
     </PersistGate>
 
   </Provider>,
