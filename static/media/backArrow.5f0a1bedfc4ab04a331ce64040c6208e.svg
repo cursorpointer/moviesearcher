@@ -1,0 +1,27 @@
+<svg width="116" height="116" viewBox="0 0 116 116" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_dd_160_390)">
+<path d="M58 8C30.4291 8 8 30.4291 8 58C8 85.5709 30.4291 108 58 108C85.5709 108 108 85.5709 108 58C108 30.4291 85.5709 8 58 8ZM69.2791 75.8875C70.9082 77.5166 70.9082 80.15 69.2791 81.7791C68.4666 82.5916 67.4 83 66.3332 83C65.2666 83 64.1998 82.5916 63.3873 81.7791L42.5541 60.9459C40.925 59.3168 40.925 56.6834 42.5541 55.0543L63.3875 34.2209C65.0166 32.5918 67.65 32.5918 69.2791 34.2209C70.9082 35.85 70.9082 38.4834 69.2791 40.1125L51.3916 58L69.2791 75.8875Z" fill="#141414"/>
+</g>
+<g clip-path="url(#clip0_160_390)">
+<path d="M41.8242 57.5C41.8242 56.5143 42.2006 55.5287 42.9518 54.7772L66.6008 31.1284C68.1051 29.624 70.5442 29.624 72.048 31.1284C73.5517 32.6322 73.5517 35.0708 72.048 36.5752L51.122 57.5L72.0472 78.4248C73.551 79.9292 73.551 82.3675 72.0472 83.8712C70.5435 85.3763 68.1044 85.3763 66.6 83.8712L42.951 60.2228C42.1998 59.4709 41.8242 58.4853 41.8242 57.5Z" fill="#E5E5E5"/>
+</g>
+<defs>
+<filter id="filter0_dd_160_390" x="0" y="0" width="116" height="116" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="-3" dy="-3"/>
+<feGaussianBlur stdDeviation="2.5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.575 0 0 0 0 0.575 0 0 0 0 0.575 0 0 0 0.35 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_160_390"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="4" dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.6 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_160_390" result="effect2_dropShadow_160_390"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_160_390" result="shape"/>
+</filter>
+<clipPath id="clip0_160_390">
+<rect width="55" height="55" fill="white" transform="translate(85 30) rotate(90)"/>
+</clipPath>
+</defs>
+</svg>

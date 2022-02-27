@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/moviesearcher/static/css/main.75ab532f.css",
+    "main.js": "/moviesearcher/static/js/main.5be930b8.js",
+    "static/media/genresIcon.svg": "/moviesearcher/static/media/genresIcon.d53588665e9af83a670e93e0fec511e6.svg",
+    "static/media/question.svg": "/moviesearcher/static/media/question.457f16fa90d37d1d058455d99035fda4.svg",
+    "static/media/filterButton.svg": "/moviesearcher/static/media/filterButton.95a4b683eddcf3882db305cc66e91f8d.svg",
+    "static/media/backArrow.svg": "/moviesearcher/static/media/backArrow.5f0a1bedfc4ab04a331ce64040c6208e.svg",
+    "static/media/favourites.svg": "/moviesearcher/static/media/favourites.d053f0537ca668380b685538022431fe.svg",
+    "static/media/dateIcon.svg": "/moviesearcher/static/media/dateIcon.23830509369b120ffa53a135c475b690.svg",
+    "static/media/ratingIcon.svg": "/moviesearcher/static/media/ratingIcon.b897de30a12d6dc585c6d9b7e0b11f80.svg",
+    "index.html": "/moviesearcher/index.html",
+    "static/media/searchIcon.svg": "/moviesearcher/static/media/searchIcon.4cb646e75d9ec9ca36ed41a9200d961b.svg",
+    "static/media/downArrow.svg": "/moviesearcher/static/media/downArrow.94dd305022005edb4f2ce32ac5e969ff.svg",
+    "main.75ab532f.css.map": "/moviesearcher/static/css/main.75ab532f.css.map",
+    "main.5be930b8.js.map": "/moviesearcher/static/js/main.5be930b8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.75ab532f.css",
+    "static/js/main.5be930b8.js"
+  ]
+}
