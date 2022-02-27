@@ -8,7 +8,7 @@ import {DateButtonType, FilterArrowType} from "../../types/types";
 
 
 export const FilterWrapper = styled.div`
-  width: 20rem;  
+  width: 20rem;
   font-family: Montserrat;
   font-weight: 600;
   font-size: 24px;
@@ -68,9 +68,9 @@ export const FilterOption = styled.div`
   cursor: pointer;
 `
 
-export const GenresIcon = styled(genresIcon) ``
-export const DateIcon = styled(dateIcon) ``
-export const RatingIcon = styled(ratingIcon) ``
+export const GenresIcon = styled(genresIcon)``
+export const DateIcon = styled(dateIcon)``
+export const RatingIcon = styled(ratingIcon)``
 
 export const FilterOptionArrow = styled(downArrow)<FilterArrowType>`
   transform: ${(props => (props.genrescollapse || props.datecollapse || props.ratingcollapse) ? "rotate(180deg)" : null)};
@@ -91,7 +91,6 @@ export const DateShow = styled.div`
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  opacity: 80%;
 `
 
 export const DateButton = styled.button<DateButtonType>`
@@ -101,15 +100,20 @@ export const DateButton = styled.button<DateButtonType>`
   color: #000;
   padding: 5px 5px;
   border: #444;
-  &&:focus{
+  opacity: 80%;
+
+  &&:focus {
     background: #444;
   }
-  &&:hover{
+
+  &&:hover {
     background: #fff;
   }
 `;
 
 export const RatingSet = styled.div`
+  display: flex;
+  flex-direction: column;
   font-weight: 400;
   font-size: 18px;
 `
@@ -133,3 +137,16 @@ export const InputRange = styled.input.attrs({
   opacity: 50%;
 `
 
+export const ExactButton = styled.button`
+  background: none;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  margin-top: 1rem;
+  width: max-content;
+  align-self: center;
+
+  &&:focus {
+    border: 4px solid #420D0DB7;
+  }
+`

@@ -2,11 +2,11 @@ import {createSlice} from "@reduxjs/toolkit";
 import {FilterType} from '../../../types/types'
 
 const initialFilter: FilterType = {
-    genres: [],
-    date: 0,
-    rating: 0,
-    page: 1,
-    filterCollapse: false
+  genres: [],
+  date: 0,
+  rating: 0,
+  page: 1,
+  filterCollapse: false
 }
 
 export const filterSlice = createSlice({

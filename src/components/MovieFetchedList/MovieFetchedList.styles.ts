@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { MovieListType } from "../../types/types";
+import {MovieListType} from "../../types/types";
 
 export const MovieFetchedListListWrapper = styled.div`
   display: flex;
@@ -25,7 +25,7 @@ export const Title = styled.span`
   color: #FFFFFF;
 `
 
-export const GenButton = styled.div `
+export const GenButton = styled.div`
   display: flex;
   justify-content: center;
   font-family: Montserrat;

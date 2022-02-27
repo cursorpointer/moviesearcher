@@ -27,7 +27,6 @@ export const MoviePreview: FC<MovieType> = ({
         <StyledLink to={`/moviesearcher/details/${id}`}><Question/> </StyledLink>
       }
       <StyledLink to={`/moviesearcher/details/${id}`}> <Title>{title}</Title> </StyledLink>
-
     </MoviePreviewCard>
   );
 };

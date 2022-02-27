@@ -1,11 +1,10 @@
 import {useDispatch} from "react-redux";
-import { filterDate } from "../../../../store/modules/Filter/slice";
+import {filterDate} from "../../../../store/modules/Filter/slice";
 import {FC} from "react";
-import { ReleaseDateButtonType } from "../../../../types/types";
-import { DateButton } from "../../Filter.styles";
+import {ReleaseDateButtonType} from "../../../../types/types";
+import {DateButton} from "../../Filter.styles";
 
-export const ReleaseDateButton:FC<ReleaseDateButtonType> = ({title, date}) => {
-
+export const ReleaseDateButton: FC<ReleaseDateButtonType> = ({title, date}) => {
   const dispatch = useDispatch()
   const handleSetFilter = () => {
     dispatch(filterDate(date))

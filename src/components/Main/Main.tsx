@@ -6,8 +6,8 @@ export const Main = () => {
 
   return (
     <div>
-      <Header />
-      <MovieFetchedList />
+      <Header/>
+      <MovieFetchedList/>
     </div>
   );
 };

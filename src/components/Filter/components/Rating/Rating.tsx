@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import {useDispatch} from "react-redux";
 import {filterRating} from "../../../../store/modules/Filter/slice";
 import {
+  ExactButton,
   FilterOption,
   FilterOptionArrow,
   FilterOptionWrapper,
@@ -15,18 +16,21 @@ export const Rating = () => {
   const [value, setValue] = useState('');
   const dispatch = useDispatch()
 
-  const handleChangeValue = (event: React.ChangeEvent<HTMLInputElement>)=> {
+  const handleChangeValue = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value)
     dispatch(filterRating(parseFloat(value)))
   }
   const handleShowRating = () => {
-   setRatingCollapse(!ratingCollapse)
+    setRatingCollapse(!ratingCollapse)
+  }
+  const handleSetDefault = () => {
+    dispatch(filterRating(0))
   }
 
   return (
     <FilterOptionWrapper>
       <FilterOption onClick={handleShowRating}>
-        <RatingIcon />
+        <RatingIcon/>
         рейтинг
         <FilterOptionArrow ratingcollapse={ratingCollapse ? 1 : 0}></FilterOptionArrow>
       </FilterOption>
@@ -42,12 +46,10 @@ export const Rating = () => {
             onChange={handleChangeValue}
           />
           <div>{value} и выше</div>
+          <ExactButton onClick={handleSetDefault}>не учитывать</ExactButton>
         </RatingSet>
         }
       </div>
     </FilterOptionWrapper>
-
-
-
   );
 };

@@ -7,10 +7,10 @@ function App() {
 
   return (
     <div>
-        <Routes>
-          <Route path={"/moviesearcher"} element={<Main/>}/>
-          <Route path={"/moviesearcher/details/:id"} element={<MovieDetails/>}/>
-        </Routes>
+      <Routes>
+        <Route path={"/moviesearcher"} element={<Main/>}/>
+        <Route path={"/moviesearcher/details/:id"} element={<MovieDetails/>}/>
+      </Routes>
     </div>
   );
 }

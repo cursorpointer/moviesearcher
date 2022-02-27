@@ -3,7 +3,6 @@ import {SearchIconType, ToggleButtonFavType, ToggleButtonGenType} from "../../ty
 import {ReactComponent as searchIcon} from "../../assets/searchIcon.svg";
 
 
-
 export const SearcherModeToggle = styled.div`
   justify: center;
   display: flex;
@@ -34,7 +33,7 @@ export const ToggleButtonGen = styled.button<ToggleButtonGenType>`
   cursor: pointer;
   border: none;
   border-radius: ${(props) => (!props.favouritesmode && "100px")};
-  background: ${(props) => (!props.favouritesmode ? "#1F1F1F" : "transparent" )};
+  background: ${(props) => (!props.favouritesmode ? "#1F1F1F" : "transparent")};
   box-shadow: ${(props) => (!props.favouritesmode ? "3px -3px 4px rgba(229, 229, 229, 0.25), 4px 4px 4px rgba(0, 0, 0, 0.5)" : "transparent")};
 `
 export const ToggleButtonFav = styled.button<ToggleButtonFavType>`
@@ -51,11 +50,11 @@ export const ToggleButtonFav = styled.button<ToggleButtonFavType>`
   cursor: pointer;
   border: none;
   border-radius: ${(props) => (props.favouritesmode && "100px")};
-  background: ${(props) => (props.favouritesmode ? "#1F1F1F" : "transparent" )};
+  background: ${(props) => (props.favouritesmode ? "#1F1F1F" : "transparent")};
   box-shadow: ${(props) => (props.favouritesmode ? "3px -3px 4px rgba(229, 229, 229, 0.25), 4px 4px 4px rgba(0, 0, 0, 0.5)" : "transparent")};
 `
 
-export const SearchInput = styled.input `
+export const SearchInput = styled.input`
   outline: none;
   width: 20rem;
   height: 4.2rem;
@@ -71,7 +70,7 @@ export const SearchInput = styled.input `
   padding-right: 5px;
 `
 export const SearchWrapper = styled.div`
-display: flex;
+  display: flex;
 `
 
 export const SearchIcon = styled(searchIcon)<SearchIconType>`

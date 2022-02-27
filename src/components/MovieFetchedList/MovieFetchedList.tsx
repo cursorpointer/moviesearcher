@@ -45,7 +45,7 @@ export const MovieFetchedList = () => {
   return (
     <MovieFetchedListListWrapper>
       {filter.filterCollapse &&
-        <GenButton onClick={handleFetchFilms}>искать</GenButton>
+      <GenButton onClick={handleFetchFilms}>искать</GenButton>
       }
 
       <MovieList filterCollapse={filter.filterCollapse}>

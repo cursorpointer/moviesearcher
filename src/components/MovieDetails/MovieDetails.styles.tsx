@@ -68,16 +68,16 @@ export const Gross = styled.span`
 export const FavouritesButton = styled(favourites)<FavouriteButtonType>`
   cursor: pointer;
   ${(props => props.favourite && css`
-          &:hover {
-            fill: #fff;
-          }
-        `
+            &:hover {
+              fill: #fff;
+            }
+          `
   )};
   ${(props => !props.favourite && css`
-          &:hover {
-            fill: #444;
-          }
-        `
+            &:hover {
+              fill: #444;
+            }
+          `
   )};
 `
 export const HomeButton = styled.div`

@@ -9,12 +9,12 @@ export const toggleFavouritesSlice = createSlice({
   name: "toggleFavourites",
   initialState: initialToggleFav,
   reducers: {
-    toggleMode (state) {
+    toggleMode(state) {
       state.favouritesMode = !state.favouritesMode
     }
   }
 })
 
-export const { toggleMode } = toggleFavouritesSlice.actions
+export const {toggleMode} = toggleFavouritesSlice.actions
 
 export default toggleFavouritesSlice.reducer

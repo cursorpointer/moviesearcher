@@ -2,8 +2,9 @@ import styled from 'styled-components'
 import {Link} from 'react-router-dom'
 import {ReactComponent as question} from "../../assets/question.svg";
 
-export const StyledLink = styled(Link) `
+export const StyledLink = styled(Link)`
   text-decoration: none;
+
   &:focus,
   &:hover,
   &:visited,

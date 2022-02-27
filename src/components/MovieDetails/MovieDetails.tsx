@@ -26,12 +26,12 @@ import {
 import {formatDate} from "../../utils/formatDate";
 import {formatRuntime} from "../../utils/formatRuntime";
 import {Question, StyledLink} from "../Main/Main.styles";
-import { Title } from "../MovieFetchedList/MovieFetchedList.styles";
+import {Title} from "../MovieFetchedList/MovieFetchedList.styles";
 
 export const MovieDetails = ({}) => {
   const dispatch = useAppDispatch();
   const idFromURL = useParams().id;
-  const {favourites:{favMovies}} = useAppSelector(state => state);
+  const {favourites: {favMovies}} = useAppSelector(state => state);
 
   const {data} = movieAPI.useFetchDetailsQuery(idFromURL)
   const genres = data?.genres;
@@ -59,10 +59,10 @@ export const MovieDetails = ({}) => {
     <MovieDetailsScreen>
       <StyledLink to={"/moviesearcher"}>
         <HomeButton>
-         <Home />
+          <Home/>
         </HomeButton>
       </StyledLink>
-      <MovieDetailsCard >
+      <MovieDetailsCard>
         <ImgRatingBlock>
           {poster
             ?

@@ -11,6 +11,7 @@ export const MoviePreviewCard = styled.div`
 `
 
 export const CardImg = styled.img`
+  max-height: 450px;
   border-radius: 20px;;
   position: relative;
 
@@ -30,7 +31,6 @@ export const Title = styled.span`
   font-size: 20px;
   letter-spacing: 0.03em;
   color: #FFFFFF;
-
 `
 
 export const Description = styled.span<DescriptionType>`

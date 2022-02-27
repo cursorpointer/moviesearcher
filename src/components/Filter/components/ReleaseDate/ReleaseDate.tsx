@@ -1,6 +1,15 @@
 import {ReleaseDateButton} from "./ReleaseDateButton";
-import {DateIcon, DateShow, FilterOption, FilterOptionArrow, FilterOptionWrapper} from "../../Filter.styles";
-import {useState} from "react";
+import {
+  DateIcon,
+  DateShow,
+  ExactButton,
+  FilterOption,
+  FilterOptionArrow,
+  FilterOptionWrapper
+} from "../../Filter.styles";
+import React, {useState} from "react";
+import {filterDate} from "../../../../store/modules/Filter/slice";
+import {useDispatch} from "react-redux";
 
 
 export const ReleaseDate = () => {
@@ -15,15 +24,18 @@ export const ReleaseDate = () => {
     {title: 'до 1970 года', date: 1970},
     {title: 'до 1960 года', date: 1960},
   ]
-
+  const dispatch = useDispatch()
   const handleShowDate = () => {
     setDateCollapse(!dateCollapse)
+  }
+  const handleSetDefault = () => {
+    dispatch(filterDate(2025))
   }
 
   return (
     <FilterOptionWrapper>
       <FilterOption onClick={handleShowDate}>
-        <DateIcon />
+        <DateIcon/>
         год
         <FilterOptionArrow datecollapse={dateCollapse ? 1 : 0}></FilterOptionArrow>
       </FilterOption>
@@ -38,6 +50,7 @@ export const ReleaseDate = () => {
             >
             </ReleaseDateButton>
           )}
+          <ExactButton onClick={handleSetDefault}>не учитывать</ExactButton>
         </DateShow>
         }
       </div>

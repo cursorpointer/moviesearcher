@@ -38,7 +38,6 @@ interface FetchedData {
 }
 
 
-
 function* fetchMovies(action: fetchMoviesActionType) {
   try {
     const moviesData: FetchedData = yield call(() =>
