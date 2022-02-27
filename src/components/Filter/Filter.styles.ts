@@ -132,7 +132,7 @@ export const GenButton = styled.div `
   cursor: pointer;
   position: absolute;
   top: 50rem;
-  left: 63.5rem;
+  left: 51.5rem;
 `
 
 export const HiddenRadioButton = styled.input.attrs({
