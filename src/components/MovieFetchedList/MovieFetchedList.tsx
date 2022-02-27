@@ -74,7 +74,7 @@ export const MovieFetchedList = () => {
           >
           </MoviePreview>
         )}
-        {(movies.length > 1) || favouritesMode
+        {(movies.length > 1) || favouritesMode && favMovies.length
           ?
           <Paginate
             current={page}
