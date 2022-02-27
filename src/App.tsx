@@ -7,12 +7,10 @@ function App() {
 
   return (
     <div>
-      <HashRouter>
         <Routes>
           <Route path={"/moviesearcher"} element={<Main/>}/>
           <Route path={"/moviesearcher/details/:id"} element={<MovieDetails/>}/>
         </Routes>
-      </HashRouter>
     </div>
   );
 }
