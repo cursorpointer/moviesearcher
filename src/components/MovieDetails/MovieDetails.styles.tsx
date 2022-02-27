@@ -14,7 +14,7 @@ export const MovieDetailsScreen = styled.div`
 export const MovieDetailsCard = styled.div`
   display: flex;
   justify-content: center;
-  gap: 5rem;
+  gap: 20rem;
   font-family: Roboto;
   font-size: 30px;
   color: #E6E6E6;

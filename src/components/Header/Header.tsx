@@ -19,7 +19,7 @@ export const Header = () => {
       <HeaderWrapper>
         {!favouritesMode && <Filter/>}
         <SearcherModeToggle>
-          <StyledLink to={`/`}>
+          <StyledLink to={`/moviesearcher`}>
             <ToggleButtonGen
               disabled={!favouritesMode}
               favouritesmode={favouritesMode}
