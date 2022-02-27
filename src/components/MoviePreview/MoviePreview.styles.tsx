@@ -7,11 +7,18 @@ export const MoviePreviewCard = styled.div`
   flex-direction: column;
   align-items: center;
   padding-bottom: 5rem;
-  gap: 50px;
+  gap: 5rem;
+`
+export const MoviePreviewFavouritesCard = styled.div`
+  display: flex;
+  justify-content: space-around;
+  gap: 5rem;
+  align-items: center;
 `
 
 export const CardImg = styled.img`
   max-height: 450px;
+  min-height: 450px;
   border-radius: 20px;;
   position: relative;
 

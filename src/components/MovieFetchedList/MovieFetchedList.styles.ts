@@ -16,14 +16,6 @@ export const MovieList = styled.div<MovieListType>`
   filter: ${(props) => (props.filterCollapse && "blur(8px)")};
 `
 
-export const Title = styled.span`
-  z-index: 1;
-  font-family: Poppins;
-  font-weight: bold;
-  font-size: 50px;
-  letter-spacing: 0.03em;
-  color: #FFFFFF;
-`
 
 export const GenButton = styled.div`
   display: flex;

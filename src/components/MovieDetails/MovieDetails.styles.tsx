@@ -14,7 +14,7 @@ export const MovieDetailsScreen = styled.div`
 export const MovieDetailsCard = styled.div`
   display: flex;
   justify-content: center;
-  gap: 20rem;
+  gap: 10rem;
   font-family: Roboto;
   font-size: 30px;
   color: #E6E6E6;
@@ -50,6 +50,20 @@ export const Rating = styled.span`
   position: relative;
   left: 8rem;
 
+`
+
+export const CardImg = styled.img`
+  border-radius: 20px;;
+  position: relative;
+
+`
+export const Title = styled.span`
+  z-index: 1;
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 50px;
+  letter-spacing: 0.03em;
+  color: #FFFFFF;
 `
 
 export const ImgRatingBlock = styled.div`

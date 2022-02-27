@@ -10,6 +10,7 @@ import {filterCollapseAction, filterPage} from "../../store/modules/Filter/slice
 import {formatCardNum} from "../../utils/formatNum";
 import {Question} from "../Main/Main.styles";
 import {GenButton, MovieFetchedListListWrapper, MovieList} from "./MovieFetchedList.styles";
+import {MoviePreviewFavourites} from "../MoviePreview/MoviePreviewFavourites";
 
 export const MovieFetchedList = () => {
   const {toggleFavourites: {favouritesMode}} = useAppSelector(state => state)
@@ -70,7 +71,7 @@ export const MovieFetchedList = () => {
       </MovieList>
 
       {favouritesMode && favMovies.map((item: MovieType) =>
-        <MoviePreview
+        <MoviePreviewFavourites
           key={item.id}
           title={item.title}
           overview={item.overview}
@@ -80,10 +81,10 @@ export const MovieFetchedList = () => {
           release_date={item.release_date}
           num={formatCardNum(favMovies, item)}
         >
-        </MoviePreview>
+        </MoviePreviewFavourites>
       )}
 
-      {(movies.length > 1) && !favouritesMode || favouritesMode && favMovies.length
+      {(movies.length > 1) && !favouritesMode || favouritesMode && favMovies.length > 15
         ?
         <Paginate
           current={page}

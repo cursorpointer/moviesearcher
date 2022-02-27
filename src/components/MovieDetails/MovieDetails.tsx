@@ -1,5 +1,4 @@
 import {
-  CardImg,
   CardOverview,
   Date,
   Description,
@@ -26,7 +25,7 @@ import {
 import {formatDate} from "../../utils/formatDate";
 import {formatRuntime} from "../../utils/formatRuntime";
 import {Question, StyledLink} from "../Main/Main.styles";
-import {Title} from "../MovieFetchedList/MovieFetchedList.styles";
+import {CardImg, Title} from "./MovieDetails.styles";
 
 export const MovieDetails = ({}) => {
   const dispatch = useAppDispatch();
@@ -57,11 +56,13 @@ export const MovieDetails = ({}) => {
 
   return (
     <MovieDetailsScreen>
+
       <StyledLink to={"/moviesearcher"}>
         <HomeButton>
           <Home/>
         </HomeButton>
       </StyledLink>
+
       <MovieDetailsCard>
         <ImgRatingBlock>
           {poster
