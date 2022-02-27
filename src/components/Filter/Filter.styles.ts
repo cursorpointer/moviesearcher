@@ -114,26 +114,6 @@ export const RatingSet = styled.div`
   font-size: 18px;
 `
 
-export const GenButton = styled.div `
-  display: flex;
-  justify-content: center;
-  font-family: Montserrat;
-  font-weight: 600;
-  text-transform: uppercase;
-  font-size: 34px;
-  color: #000000;
-  font-weight: 600;
-  width: 12rem;
-  height: 4.2rem;
-  background: #E5E5E5;
-  border-radius: 100px;
-  padding: 15px 40px;
-  box-shadow: 4px 4px 4px rgb(245, 241, 241), 4px 4px 4px rgb(250, 247, 247);
-  cursor: pointer;
-  position: absolute;
-  top: 50rem;
-  left: 51.5rem;
-`
 
 export const HiddenRadioButton = styled.input.attrs({
   type: "radio",

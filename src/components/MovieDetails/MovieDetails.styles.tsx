@@ -28,12 +28,12 @@ export const CardImgBlur = styled.img`
 
 export const TitleShadow = styled.span`
   position: absolute;
-  top: 10rem;
+  top: 11rem;
   z-index: 0;
   font-family: Poppins;
   font-style: normal;
   font-weight: bold;
-  font-size: 100px;
+  font-size: 50px;
   line-height: 150px;
   color: #292929;
 `

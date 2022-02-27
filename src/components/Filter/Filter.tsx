@@ -1,11 +1,9 @@
 import {ReleaseDate} from "../Filter/components/ReleaseDate/ReleaseDate";
 import {Rating} from "../Filter/components/Rating/Rating";
-import React, {useState} from "react";
+import React from "react";
 import {FilterArrow, FilterButton, FilterOptions, FilterWrapper} from "./Filter.styles"
 import {Genres} from "../Filter/components/Genres/Genres";
-import {GenButton} from "../Filter/Filter.styles";
 import {useAppSelector} from "../../hooks/redux";
-import {getMoviesFetch} from "../../store/modules/Movies/slice";
 import {useDispatch} from "react-redux";
 import {filterCollapseAction} from "../../store/modules/Filter/slice";
 
@@ -15,10 +13,7 @@ export const Filter = () => {
     dispatch(filterCollapseAction())
   }
   const {filter} = useAppSelector(state => state)
-  const handleFetchFilms = () => {
-    dispatch(getMoviesFetch(filter))
-    handleFilterToggle()
-  }
+
   return (
     <>
       <FilterWrapper>
@@ -34,9 +29,6 @@ export const Filter = () => {
         </FilterOptions>
         }
       </FilterWrapper>
-      {filter.filterCollapse &&
-      <GenButton onClick={handleFetchFilms}>искать</GenButton>
-      }
     </>
   );
 };

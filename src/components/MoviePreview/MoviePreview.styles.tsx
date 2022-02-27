@@ -2,9 +2,9 @@ import styled from 'styled-components'
 import {css} from "styled-components";
 import {DescriptionType} from '../../types/types'
 
-export const MoviePreviewCard = styled.div `
+export const MoviePreviewCard = styled.div`
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   padding-bottom: 5rem;
   gap: 50px;
@@ -27,13 +27,13 @@ export const Title = styled.span`
   z-index: 1;
   font-family: Poppins;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 20px;
   letter-spacing: 0.03em;
   color: #FFFFFF;
 
 `
 
-export const Description= styled.span<DescriptionType>`
+export const Description = styled.span<DescriptionType>`
   font-family: Roboto;
   font-weight: normal;
   font-size: 30px;
@@ -42,17 +42,17 @@ export const Description= styled.span<DescriptionType>`
   overflow: fragments;
   position: relative;
   ${(props => props.overview && css`
-       ::after {
-         content: "";
-         position: absolute;
-         bottom: -1rem;
-         left: 0;
-         border: 1px solid #666666;
-         width: 40rem;
-       }
-     `
+            ::after {
+              content: "";
+              position: absolute;
+              bottom: -1rem;
+              left: 0;
+              border: 1px solid #666666;
+              width: 40rem;
+            }
+          `
   )};
-  
+
 `
 export const Date = styled.span`
   font-family: Montserrat;
@@ -63,6 +63,7 @@ export const Date = styled.span`
   text-transform: lowercase;
   color: #666666;
   position: relative;
+
   ::after {
     content: "";
     position: absolute;
@@ -73,7 +74,7 @@ export const Date = styled.span`
   }
 `
 
-export const Genres = styled.span `
+export const Genres = styled.span`
   font-family: Montserrat;
   font-style: normal;
   font-weight: normal;
@@ -87,7 +88,7 @@ export const CardNum = styled.span`
   font-family: Montserrat;
   font-weight: 900;
   font-size: 200px;
-  color:  #121212;;
+  color: #121212;;
   text-shadow: 2px 2px 1px #666666;
   -webkit-background-clip: text;
 `

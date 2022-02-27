@@ -4,7 +4,6 @@ import {
   Date,
   Description,
   Genres,
-  Title
 } from "../MoviePreview/MoviePreview.styles";
 import {movieAPI} from "../../store/modules/Movies/MoviesQuery";
 import {useParams} from "react-router-dom";
@@ -27,6 +26,7 @@ import {
 import {formatDate} from "../../utils/formatDate";
 import {formatRuntime} from "../../utils/formatRuntime";
 import {Question, StyledLink} from "../Main/Main.styles";
+import { Title } from "../MovieFetchedList/MovieFetchedList.styles";
 
 export const MovieDetails = ({}) => {
   const dispatch = useAppDispatch();
