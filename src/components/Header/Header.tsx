@@ -24,7 +24,7 @@ export const Header = () => {
               disabled={!favouritesMode}
               favouritesmode={favouritesMode}
               onClick={handleToggle}
-            > генератор
+            > поисковик
             </ToggleButtonGen>
           </StyledLink>
 

@@ -35,7 +35,7 @@ export const Filter = () => {
         }
       </FilterWrapper>
       {filter.filterCollapse &&
-      <GenButton onClick={handleFetchFilms}>сгенерировать</GenButton>
+      <GenButton onClick={handleFetchFilms}>искать</GenButton>
       }
     </>
   );
