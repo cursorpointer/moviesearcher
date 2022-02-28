@@ -59,7 +59,7 @@ export const MovieDetails = ({}) => {
 
       <StyledLink to={"/moviesearcher"}>
         <HomeButton>
-          <Home/>
+          <Home />
         </HomeButton>
       </StyledLink>
 
@@ -77,14 +77,15 @@ export const MovieDetails = ({}) => {
           <Rating>Оценки: {vote}</Rating>
         </ImgRatingBlock>
         <CardOverview>
-          <Title>{title}</Title>
+          <div style={{display: "flex", gap: "2rem"}}>
+            <Title>{title}</Title> <FavouritesButton favourite={isFavourite} fill={isFavourite ? "red" : "#fff"} onClick={handleToFavourites}/>
+          </div>
           <TitleShadow>{title}</TitleShadow>
           <Date>{formatDate(date)} г.</Date>
           <Genres>{genres && genres[0].name}</Genres>
           <Description overview={overview}>{!overview && "описание отсутствует"} {overview}</Description>
           <Runtime>Продолжительность: {formatRuntime(duration)}</Runtime>
           <Gross>Доход: {revenue}$</Gross>
-          <FavouritesButton favourite={isFavourite} fill={isFavourite ? "red" : "#fff"} onClick={handleToFavourites}/>
         </CardOverview>
       </MovieDetailsCard>
     </MovieDetailsScreen>

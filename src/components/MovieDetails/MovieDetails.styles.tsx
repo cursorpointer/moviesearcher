@@ -14,7 +14,7 @@ export const MovieDetailsScreen = styled.div`
 export const MovieDetailsCard = styled.div`
   display: flex;
   justify-content: center;
-  gap: 10rem;
+  gap: 5rem;
   font-family: Roboto;
   font-size: 30px;
   color: #E6E6E6;
@@ -24,6 +24,7 @@ export const CardImgBlur = styled.img`
   position: absolute;
   left: 8rem;
   top: 10rem;
+  opacity: 50%;
 `
 
 export const TitleShadow = styled.span`

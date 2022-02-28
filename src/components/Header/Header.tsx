@@ -6,18 +6,21 @@ import React from "react";
 import {useAppSelector} from "../../hooks/redux";
 import {useDispatch} from "react-redux";
 import {toggleMode} from "../../store/modules/Favourites/toggleFavourites.slice";
+import {filterCollapseAction} from "../../store/modules/Filter/slice";
 
 export const Header = () => {
+  const {filter:{filterCollapse}} = useAppSelector(state => state)
   const {toggleFavourites: {favouritesMode}} = useAppSelector(state => state)
   const dispatch = useDispatch()
   const handleToggle = () => {
     dispatch(toggleMode())
+    filterCollapse && dispatch(filterCollapseAction()) //убирает кнопку "искать", если переключить режим при открытом фильтре
   }
 
   return (
     <div>
       <HeaderWrapper>
-        {!favouritesMode && <Filter/>}
+        {!favouritesMode && <Filter/>} {/*в "избранном" не рисуются фильтр и поиск*/}
         <SearcherModeToggle>
           <StyledLink to={`/moviesearcher`}>
             <ToggleButtonGen

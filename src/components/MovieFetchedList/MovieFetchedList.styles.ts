@@ -17,7 +17,7 @@ export const MovieList = styled.div<MovieListType>`
 `
 
 
-export const GenButton = styled.div`
+export const FilterSubmitButton = styled.div`
   display: flex;
   justify-content: center;
   font-family: Montserrat;

@@ -22,11 +22,11 @@ export const Filter = () => {
           <FilterArrow filtercollapse={filter.filterCollapse ? 1 : 0}></FilterArrow>
         </FilterButton>
         {filter.filterCollapse &&
-        <FilterOptions>
-          <Genres/>
-          <ReleaseDate/>
-          <Rating/>
-        </FilterOptions>
+          <FilterOptions>
+            <Genres/>
+            <ReleaseDate/>
+            <Rating/>
+          </FilterOptions>
         }
       </FilterWrapper>
     </>

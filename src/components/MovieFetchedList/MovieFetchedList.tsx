@@ -9,7 +9,7 @@ import {useDispatch} from "react-redux";
 import {filterCollapseAction, filterPage} from "../../store/modules/Filter/slice";
 import {formatCardNum} from "../../utils/formatNum";
 import {Question} from "../Main/Main.styles";
-import {GenButton, MovieFetchedListListWrapper, MovieList} from "./MovieFetchedList.styles";
+import {FilterSubmitButton, MovieFetchedListListWrapper, MovieList} from "./MovieFetchedList.styles";
 import {MoviePreviewFavourites} from "../MoviePreview/MoviePreviewFavourites";
 
 export const MovieFetchedList = () => {
@@ -46,13 +46,14 @@ export const MovieFetchedList = () => {
   return (
     <MovieFetchedListListWrapper>
       {filter.filterCollapse &&
-      <GenButton onClick={handleFetchFilms}>искать</GenButton>
+        <FilterSubmitButton onClick={handleFetchFilms}>искать</FilterSubmitButton> //при открытии фильтра появляется кнопка искать
       }
 
       <MovieList filterCollapse={filter.filterCollapse}>
-        {!movies.length && !favouritesMode && <Question/>}
+        {!movies.length && !favouritesMode && <Question/>} {/*при пустом массиве фильмов показывает анимацию с вопросом*/}
+
         {!favouritesMode && movies.map((item: MovieType) =>
-          (item.title === "UNdefined")
+          (item.title === "UNdefined") //из-за useEffect в массив фильмов приходит UNdefined фильм и рисуется пидарас такой
             ?
             <Question key={item.id}></Question>
             :
@@ -70,7 +71,7 @@ export const MovieFetchedList = () => {
         )}
       </MovieList>
 
-      {favouritesMode && favMovies.map((item: MovieType) =>
+      {favouritesMode && favMovies.map((item: MovieType) => // если переключатель на "избранном", рисуются фильмы оттуда
         <MoviePreviewFavourites
           key={item.id}
           title={item.title}
@@ -84,7 +85,7 @@ export const MovieFetchedList = () => {
         </MoviePreviewFavourites>
       )}
 
-      {(movies.length > 1) && !favouritesMode || favouritesMode && favMovies.length > 15
+      {(movies.length > 1) && !favouritesMode || favouritesMode && favMovies.length > 15 //чтобы пагинация не появлялась без фильмов
         ?
         <Paginate
           current={page}

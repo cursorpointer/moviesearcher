@@ -25,15 +25,13 @@ export const MoviePreview: FC<MovieType> = ({
     <MoviePreviewCard>
       {poster_path
         ?
-          <StyledLink to={`/moviesearcher/details/${id}`}>
-            <CardImg src={`https://image.tmdb.org/t/p/w300/${poster_path}`}/>
-          </StyledLink>
-
-          :
-          <StyledLink to={`/moviesearcher/details/${id}`}><Question/> </StyledLink>
+        <StyledLink to={`/moviesearcher/details/${id}`}>
+          <CardImg src={`https://image.tmdb.org/t/p/w300/${poster_path}`}/>
+        </StyledLink>
+        :
+        <StyledLink to={`/moviesearcher/details/${id}`}> <Question/> </StyledLink>
       }
-      <StyledLink to={`/moviesearcher/details/${id}`}> <Title>{title}</Title> </StyledLink>
-
+      <StyledLink to={`/moviesearcher/details/${id}`}> <Title>{title} </Title> </StyledLink>
     </MoviePreviewCard>
   );
 };

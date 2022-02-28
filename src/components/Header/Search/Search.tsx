@@ -8,30 +8,25 @@ import {filterCollapseAction} from "../../../store/modules/Filter/slice";
 export const Search = () => {
   const [value, setValue] = useState('')
   const dispatch = useDispatch()
-  const {
-    filter: {
-      page
-    }
-  } = useAppSelector(state => state)
-  const handleChangeValue = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setValue(event.target.value)
-  }
-  const searchAction = {
+  const {filter: {page, filterCollapse}} = useAppSelector(state => state)
+  const searchActionPayload = {
     title: value,
     page: page
   }
-  const {filter: {filterCollapse}} = useAppSelector(state => state)
+  const handleChangeValue = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(event.target.value)
+  }
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    e.code === "Enter" && (value.trim()) && dispatch(getMoviesFetch(searchAction));
-    filterCollapse && dispatch(filterCollapseAction())
+    e.code === "Enter" && (value.trim()) && dispatch(getMoviesFetch(searchActionPayload));
+    filterCollapse && dispatch(filterCollapseAction()) //закрывает фильтр, если он открыт
   }
   const handleClick = () => {
-    (value.trim()) && dispatch(getMoviesFetch(searchAction));
+    (value.trim()) && dispatch(getMoviesFetch(searchActionPayload));
     filterCollapse && dispatch(filterCollapseAction())
   }
 
   useEffect(() => {
-    dispatch(getMoviesFetch(searchAction))
+    dispatch(getMoviesFetch(searchActionPayload))
   }, [page])
 
   return (
