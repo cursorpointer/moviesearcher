@@ -14,6 +14,7 @@ export const MoviePreviewFavouritesCard = styled.div`
   justify-content: space-around;
   gap: 5rem;
   align-items: center;
+  margin-bottom: 10rem;
 `
 
 export const CardImg = styled.img`

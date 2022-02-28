@@ -30,11 +30,11 @@ import {toggleMode} from "../../store/modules/Favourites/toggleFavourites.slice"
 
 export const MovieDetails = ({}) => {
   const dispatch = useAppDispatch();
-  const idFromURL = useParams().id;
+  const {id} = useParams();
   const {favourites: {favMovies}} = useAppSelector(state => state);
   const {toggleFavourites: {favouritesMode}} = useAppSelector(state => state);
 
-  const {data} = movieAPI.useFetchDetailsQuery(idFromURL)
+  const {data} = movieAPI.useFetchDetailsQuery(id)
   const genres = data?.genres;
   const date = data?.release_date;
   const poster = data?.poster_path;

@@ -90,7 +90,7 @@ export const FavouritesButton = styled(favourites)<FavouriteButtonType>`
   )};
   ${(props => !props.favourite && css`
             &:hover {
-              fill: #444;
+              fill: red;
             }
           `
   )};
