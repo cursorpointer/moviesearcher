@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/moviesearcher/static/css/main.75ab532f.css",
-    "main.js": "/moviesearcher/static/js/main.b0971dfd.js",
+    "main.js": "/moviesearcher/static/js/main.76ca6874.js",
     "static/media/genresIcon.svg": "/moviesearcher/static/media/genresIcon.d53588665e9af83a670e93e0fec511e6.svg",
     "static/media/question.svg": "/moviesearcher/static/media/question.457f16fa90d37d1d058455d99035fda4.svg",
     "static/media/filterButton.svg": "/moviesearcher/static/media/filterButton.95a4b683eddcf3882db305cc66e91f8d.svg",
@@ -13,10 +13,10 @@
     "static/media/home.svg": "/moviesearcher/static/media/home.01a6d8046a294fbc5ddfa65d2c18bce4.svg",
     "static/media/downArrow.svg": "/moviesearcher/static/media/downArrow.94dd305022005edb4f2ce32ac5e969ff.svg",
     "main.75ab532f.css.map": "/moviesearcher/static/css/main.75ab532f.css.map",
-    "main.b0971dfd.js.map": "/moviesearcher/static/js/main.b0971dfd.js.map"
+    "main.76ca6874.js.map": "/moviesearcher/static/js/main.76ca6874.js.map"
   },
   "entrypoints": [
     "static/css/main.75ab532f.css",
-    "static/js/main.b0971dfd.js"
+    "static/js/main.76ca6874.js"
   ]
 }
