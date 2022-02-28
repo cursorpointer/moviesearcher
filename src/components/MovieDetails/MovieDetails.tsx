@@ -26,11 +26,13 @@ import {formatDate} from "../../utils/formatDate";
 import {formatRuntime} from "../../utils/formatRuntime";
 import {Question, StyledLink} from "../Main/Main.styles";
 import {CardImg, Title} from "./MovieDetails.styles";
+import {toggleMode} from "../../store/modules/Favourites/toggleFavourites.slice";
 
 export const MovieDetails = ({}) => {
   const dispatch = useAppDispatch();
   const idFromURL = useParams().id;
   const {favourites: {favMovies}} = useAppSelector(state => state);
+  const {toggleFavourites: {favouritesMode}} = useAppSelector(state => state);
 
   const {data} = movieAPI.useFetchDetailsQuery(idFromURL)
   const genres = data?.genres;
@@ -47,19 +49,22 @@ export const MovieDetails = ({}) => {
     (movie: MovieDetailsType) => movie.id === movieID)
 
   const handleToFavourites = () => {
-    isFavourite ?
+    isFavourite
+      ?
       dispatch(removeFromFavourites(movieID))
       :
       dispatch(addToFavourites(data));
-
+  }
+  const handleToggle = () => {
+    favouritesMode && dispatch(toggleMode()) //при нажатии на кнопку "домой" переключает режим с "избранное" на поисковик
   }
 
   return (
     <MovieDetailsScreen>
 
-      <StyledLink to={"/moviesearcher"}>
+      <StyledLink onClick={handleToggle} to={"/moviesearcher"}>
         <HomeButton>
-          <Home />
+          <Home/>
         </HomeButton>
       </StyledLink>
 
@@ -78,7 +83,8 @@ export const MovieDetails = ({}) => {
         </ImgRatingBlock>
         <CardOverview>
           <div style={{display: "flex", gap: "2rem"}}>
-            <Title>{title}</Title> <FavouritesButton favourite={isFavourite} fill={isFavourite ? "red" : "#fff"} onClick={handleToFavourites}/>
+            <Title>{title}</Title> <FavouritesButton favourite={isFavourite} fill={isFavourite ? "red" : "#fff"}
+                                                     onClick={handleToFavourites}/>
           </div>
           <TitleShadow>{title}</TitleShadow>
           <Date>{formatDate(date)} г.</Date>
