@@ -48,8 +48,6 @@ export const Rating = styled.span`
   line-height: 52px;
   letter-spacing: 0.03em;
   color: #E5E5E5;
-  position: relative;
-  left: 8rem;
 
 `
 

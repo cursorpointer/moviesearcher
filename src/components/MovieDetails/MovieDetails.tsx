@@ -79,7 +79,6 @@ export const MovieDetails = ({}) => {
             :
             <Question/>
           }
-          <Rating>Оценки: {vote}</Rating>
         </ImgRatingBlock>
         <CardOverview>
           <div style={{display: "flex", gap: "2rem"}}>
@@ -92,6 +91,7 @@ export const MovieDetails = ({}) => {
           <Description overview={overview}>{!overview && "описание отсутствует"} {overview}</Description>
           <Runtime>Продолжительность: {formatRuntime(duration)}</Runtime>
           <Gross>Доход: {revenue}$</Gross>
+          <Rating>Оценки: {vote}</Rating>
         </CardOverview>
       </MovieDetailsCard>
     </MovieDetailsScreen>
